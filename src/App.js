@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Home from "./Pages/Home/Home";
 import Quiz from "./Pages/Quiz/Quiz";
 import Result from ".//Pages/Result/Result";
+import image from '../public/ques1.png';
 
 function App() {
   const [questions, setQuestions] = useState();
@@ -23,7 +24,8 @@ function App() {
 
   return (
     <>
-      <div className="app" style={{ backgroundImage: 'url("/ques1.png")' }}>
+      <div className="app" style={{ backgroundImage: {image} }}> 
+      {/* 'url("/ques1.png")' */}
         <Header />
         <Routes>
           <Route exact path="/" element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions}/>}>

@@ -37,8 +37,10 @@ const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score
   const handleQuit = () => {
     setCurrQues(0);
     setQuestions();
+    navigate('/');
   };
 
+  
   return (
     <div className="question">
       <h1>Question {currQues + 1} :</h1>
@@ -53,7 +55,7 @@ const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score
             ))}
         </div>
         <div className="controls">
-          <Button variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} href="/" onClick={() => handleQuit()}>Quit</Button>
+          <Button variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} href="/"  onClick={() => handleQuit()}>Quit</Button>
           <Button variant="contained" color="primary" size="large" style={{ width: 185 }} onClick={handleNext}>
             {currQues >= 9 ? "Submit" : "Next Question"}</Button>
         </div>

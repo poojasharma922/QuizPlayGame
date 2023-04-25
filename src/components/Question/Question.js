@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./Question.css";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import { Link } from "react-router-dom";
 
 const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score,setQuestions,}) => {
   const [selected, setSelected] = useState();
@@ -55,7 +56,8 @@ const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score
             ))}
         </div>
         <div className="controls">
-          <Button variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} href="/"  onClick={() => handleQuit()}>Quit</Button>
+          {/* <Button variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} href="/"  onClick={() => handleQuit()}>Quit</Button> */}
+          <Link variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} to="/"  onClick={() => handleQuit()}>QUIT</Link>
           <Button variant="contained" color="primary" size="large" style={{ width: 185 }} onClick={handleNext}>
             {currQues >= 9 ? "Submit" : "Next Question"}</Button>
         </div>

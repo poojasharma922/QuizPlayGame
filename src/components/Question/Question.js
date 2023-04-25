@@ -35,9 +35,9 @@ const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score
   };
 
   const handleQuit = () => {
+    navigate('/');
     setCurrQues(0);
     setQuestions();
-    navigate('/');
   };
 
   

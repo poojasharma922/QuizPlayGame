@@ -18,14 +18,14 @@ const Result = ({ name, score }) => {
     }
   }, [name, navigate]);
 
-  const handleGoToHomePage = () => {
+  const handleGoToHomePageBack = () => {
     navigate('/');
   };
 
   return (
     <div className="result">
       <span className="title">Final Score : {score}</span>
-      <Button variant="contained" color="secondary" size="large" style={{ alignSelf: "center", marginTop: 20 }} onClick={handleGoToHomePage}>Go to homepage</Button>
+      <Button variant="contained" color="secondary" size="large" style={{ alignSelf: "center", marginTop: 20 }} onClick={handleGoToHomePageBack}>Go to homepage</Button>
     </div>
   );
 };

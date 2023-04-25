@@ -6,7 +6,7 @@ import "./Question.css";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import { Link } from "react-router-dom";
 
-const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score,setQuestions,}) => {
+const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score,setQuestions}) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
 
@@ -35,13 +35,26 @@ const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score
     } else setError("Please select an option first");
   };
 
+ 
+
+  // const handleQuit = () => {
+  //   setCurrQues((prev) => {
+  //     setScore(0); // Reset the score
+  //     return prev + 1; // Move to the next question
+  //   });
+  // };
+
+  // const handleQuit = () => {
+  //   setScore(0); // Reset the score
+  //   setSelected(null); // Reset the selected answer
+  //   setCurrQues((prev) => prev + 1); // Move to the next question
+  // };
   const handleQuit = () => {
-    navigate('/');
-    setCurrQues(0);
+    setScore(0); // Reset the score
+    // setSelected(null); // Reset the selected answer
+    setCurrQues(0); // Restart the quiz from the beginning
     setQuestions();
   };
-
-  
   return (
     <div className="question">
       <h1>Question {currQues + 1} :</h1>
@@ -57,7 +70,7 @@ const Question = ({currQues,setCurrQues,questions,options,correct,setScore,score
         </div>
         <div className="controls">
           {/* <Button variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} href="/"  onClick={() => handleQuit()}>Quit</Button> */}
-          <Link variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }} to="/"  onClick={() => handleQuit()}>QUIT</Link>
+          <Link variant="contained" className="bbttnn" color="secondary" size="large" style={{ width: 185 }}  onClick={handleQuit} to="/">QUIT</Link>
           <Button variant="contained" color="primary" size="large" style={{ width: 185 }} onClick={handleNext}>
             {currQues >= 9 ? "Submit" : "Next Question"}</Button>
         </div>

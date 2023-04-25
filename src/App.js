@@ -28,7 +28,7 @@ function App() {
       
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions}/>}>
+          <Route exact path="/" element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions} />}>
           </Route>
           <Route exact path="/quiz" element={<Quiz name={name} questions={questions} score={score} setScore={setScore} setQuestions={setQuestions}/>}></Route>
           <Route excat path="/result" element={<Result name={name} score={score} />}></Route>

@@ -1,25 +1,3 @@
-/* *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scrollbar-width: thin;
-}
-*::-webkit-scrollbar{
-  width: 8px;
-  background-color: grey;
-}
-
-a{
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.App{
-  min-height: 98.5vh;
-  border: 8px solid #39445a93;
-  margin: 5px;
-  padding: 5px;
-} */
 
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
@@ -44,7 +22,7 @@ a{
 .app {
   min-height: 98.5vh;
   border: 8px solid #39445a93;
-  /* background-color: rgb(191, 221, 255); */
+  background-color: rgb(205, 191, 186);
   margin: 5px;
   padding: 5px;
 }

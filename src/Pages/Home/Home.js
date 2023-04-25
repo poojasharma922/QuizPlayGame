@@ -53,7 +53,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
           <Button variant="contained" color="primary" size="large" onClick={handleSubmit}>Start Quiz</Button>
         </div>
       </div>
-      <img src='./onlinequiz.WEBP' className="banner" alt="quiz app" />
+      {/* <img src='./onlinequiz.webp' className="banner" alt="quiz app" /> */}
     </div>
   );
 };

@@ -1,8 +1,9 @@
 {
   "name": "quizapp",
   "version": "0.1.0",
+  
   "private": true,
-  "homepage": "https://poojasharma922.github.io/QuizPlay",
+  "homepage": "https://poojasharma922.github.io/QuizPlayGame",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
